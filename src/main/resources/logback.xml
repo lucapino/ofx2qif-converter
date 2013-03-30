@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration>
+    <appender name="stdout" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%date{yyyy.MM.dd HH:mm:ss.SSS} - *%-5level* [%thread] %logger{0}: %message \(%method in %file, line %line\) %exception%n</pattern>
+        </encoder>
+    </appender>
+    <logger name="com.github.lucapino.ofx.translator" additivity="false" level="INFO">
+        <appender-ref ref="stdout"/>
+    </logger>
+    <root level="ERROR">
+        <appender-ref ref="stdout"/>
+    </root>
+</configuration>
